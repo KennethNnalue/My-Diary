@@ -1,0 +1,33 @@
+body {
+    background: #3B7ED2;
+    height: 896px;
+    width: 414px;
+    left: -97px;
+    top: -1738px;
+    border-radius: 0px;
+    
+    
+
+    }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+  .login {
+    height: 536px;
+    width: 375px;
+    left: 50px;
+    top: 506px;
+    border-radius:50;
+    color:black;
+    background-color: white;
+    position: relative;
+    align-items: center;
+    
+  }
