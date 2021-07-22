@@ -1,6 +1,6 @@
 class ViewMemoryController {
 
-    static FetchViewMemory(request, response){
+    static fetchViewMemory(request, response){
 
         return response.json(
 
