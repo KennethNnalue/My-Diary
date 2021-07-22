@@ -1,8 +1,6 @@
-import { response } from 'express';
-
 class ViewMemoryController {
 
-    static FetchViewMemoryPage(request, response){
+    static FetchViewMemory(request, response){
 
         return response.json(
 
