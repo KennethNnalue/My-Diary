@@ -7,6 +7,6 @@ import ViewMemoryRouter from './ViewMemoryRouter';
 const index = express.Router();
 
 // merge IndexRouter into index
-index.use(AllmemoriesRouters, HomepageRouter,ViewMemoryRouter, IndexRouter,);
+index.use(AllmemoriesRouters, HomepageRouter,ViewMemoryRouter, IndexRouter);
 
 export default index;
