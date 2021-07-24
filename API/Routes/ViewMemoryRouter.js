@@ -3,6 +3,6 @@ import express from 'express';
 
 const ViewMemoryRouter = express.Router()
 
-ViewMemoryRouter.get('/api/v1/memory', ViewMemoryController.fetchViewMemory);
+ViewMemoryRouter.get('/api/v1/memories/:id', ViewMemoryController.fetchViewMemory);
 
 export default ViewMemoryRouter;
