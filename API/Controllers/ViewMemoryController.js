@@ -8,7 +8,7 @@ class ViewMemoryController {
 
         const memory = getMemory(diaryId);
 
-        if(!memory) return response.json(
+        if(!memory) return response.status(404).json(
             {
                 message:"Result not found"
             }
