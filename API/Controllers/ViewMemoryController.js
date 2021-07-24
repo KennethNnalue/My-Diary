@@ -1,19 +1,20 @@
+import {getMemory} from '../Helpers/query';
+
 class ViewMemoryController {
 
     static fetchViewMemory(request, response){
 
-        return response.json(
+        const diaryId = request.params.id;
 
+        const memory = getMemory(diaryId);
+
+        if(!memory) return response.json(
             {
-                id: 1,
-                title: 'My Trip To San Frannscio',
-                story: 'Today was so awesome, I enjoyed every bit of the trip',
-                mood: 'happy',
-                picture: 'https://mypicture.xyz',
-                date: '22-02-2022 12:07:06'
-            },
-
+                message:"Result not found"
+            }
         );
+
+        return response.json(memory);
     }
 }
 
