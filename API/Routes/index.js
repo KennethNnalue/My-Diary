@@ -1,5 +1,5 @@
 import express from 'express';
-import IndexRouter from './indexRouter';
+import IndexRouter from './IndexRouter';
 import HomepageRouter from './HomePageRouter';
 import AllmemoriesRouter from './AllMemoriesRouter';
 import ViewMemoryRouter from './ViewMemoryRouter';
