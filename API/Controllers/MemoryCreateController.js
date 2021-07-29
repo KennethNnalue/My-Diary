@@ -1,21 +1,18 @@
-import {createMemory} from '../Helpers/query';
+import { createMemory } from '../Helpers/query';
 
 class MemoryCreateController {
+  static createMemory(request, response) {
+    const { title } = request.body;
+    const { mood } = request.body;
+    const { story } = request.body;
+    const { picture } = request.body;
 
-    static createMemory(request, response) {
+    createMemory(title, story, mood, picture);
 
-        const title = request.body.title;
-        const mood = request.body.mood;
-        const story = request.body.story;
-        const picture = request.body.picture;
-      
-        createMemory(title, story, mood, picture);
-
-        return response.status(201).json({
-            message:"Memory has been created"
-        }
-        )
-    }
+    return response.status(201).json({
+      message: 'Memory has been created'
+    });
+  }
 }
 
 export default MemoryCreateController;

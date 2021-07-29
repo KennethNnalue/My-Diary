@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>My Diary</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="addDiary.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+
+</head>
+
+<body>
+    <!-- Nav bar starts here -->
+    <div class="nav">
+        <div class="nav-header">
+            <div class="nav-title">
+                <object data="svgs/diary.svg" class="logo"></object>
+            </div>
+        </div>
+
+
+        <div class="nav-btn">
+            <input type="checkbox" id="nav-check">
+
+            <label for="nav-check">
+                <span class="dashOne"></span>
+                <span class="dashTwo"></span>
+                <span class="dashThree"></span>
+            </label>
+
+            <ul class="nav-links">
+                <a href="signup.html">Home</a>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Nav bar ends here -->
+
+
+
+    <div class="container">
+
+        <div class="storyForm">
+
+            <form>
+                <div class="diaryTitleSection">
+
+                    <label for="title" class="titleText">Title</label> <br>
+                    <input type="text" id="email" name="email" class="titleInput" placeholder="What's the title ?">
+                    <br>
+                </div>
+
+
+                <div class="storySection">
+                    <label for"story" class="storyText">Story</label> <br>
+                    <textarea id="story" name="story" class="storyInput"
+                        placeholder="Please tell your story ..."></textarea>
+                </div>
+
+
+
+                <button type="submit" class="submitButton"><span class="submitButtonText">Add your
+                        thoughts</span></button>
+                <button class="uploadButton"><object data="svgs/camera.svg" class="camera"></object></button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+
+
+</html>

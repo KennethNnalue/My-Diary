@@ -1,4 +1,4 @@
-import memories from "../models/memories";
+import memories from "../Data/memories";
 
 export const getMemory = (id) => {
 

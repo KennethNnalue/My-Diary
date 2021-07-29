@@ -1,7 +1,7 @@
-import ViewMemoryController from "../Controllers/ViewMemoryController";
 import express from 'express';
+import ViewMemoryController from '../Controllers/ViewMemoryController';
 
-const ViewMemoryRouter = express.Router()
+const ViewMemoryRouter = express.Router();
 
 ViewMemoryRouter.get('/api/v1/memories/:id', ViewMemoryController.fetchViewMemory);
 
