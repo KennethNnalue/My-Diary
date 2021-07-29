@@ -5,12 +5,13 @@ import AllmemoriesRouter from './AllMemoriesRouter';
 import ViewMemoryRouter from './ViewMemoryRouter';
 import MemoryDeleteRouter from './MemoryDeleteRouter';
 import MemoryCreateRouter from './MemoryCreateRouter';
+import SignUpRouter from './SignUpRouter';
 
 const index = express.Router();
 
 index.use(express.json());
 // merge IndexRouter into index
-index.use(AllmemoriesRouter, HomepageRouter,ViewMemoryRouter, 
-IndexRouter, MemoryDeleteRouter, MemoryCreateRouter);
+index.use(AllmemoriesRouter, HomepageRouter, ViewMemoryRouter,
+  IndexRouter, MemoryDeleteRouter, MemoryCreateRouter, SignUpRouter);
 
 export default index;
