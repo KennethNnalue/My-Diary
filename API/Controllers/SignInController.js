@@ -12,7 +12,10 @@ class SignInController {
       where: {
         email
       }
-    });
+    }).catch((error) => response.status(500).json({
+      message: 'Internal Sever Error',
+      errorMessage: error.toString()
+    }));
 
     const isUserFound = userFound && bcrypt.compareSync(password, userFound.password);
     if (!isUserFound) {

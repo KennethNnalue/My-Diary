@@ -9,19 +9,16 @@ class SignUpController {
     const { name, email, password } = request.body;
     const hashedPassword = bcrypt.hashSync(password);
 
-    try {
-      const newUser = await User.create({ name, email, password: hashedPassword });
-      if (newUser) {
-        return response.status(201).json({
-          message: 'You have Successfully Signed Up',
-          token: createToken(newUser.id, 60 * 60 * 24)
-        });
-      }
-    } catch (error) {
-      return response.status(500).json({
-        message: 'Could not Sign Up',
-        erorMessage: error.toString()
+    const newUser = await User.create({ name, email, password: hashedPassword })
+      .catch((error) => response.status(500).json({
+        message: 'Internal Sever Error',
+        errorMessage: error.toString()
+      }));
 
+    if (newUser) {
+      return response.status(201).json({
+        message: 'You have Successfully Signed Up',
+        token: createToken(newUser.id, 60 * 60 * 24)
       });
     }
   }
