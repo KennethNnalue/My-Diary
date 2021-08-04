@@ -1,8 +1,9 @@
 import express from 'express';
+import Gate from '../Gates/Gate';
 import ViewMemoryController from '../Controllers/ViewMemoryController';
 
 const ViewMemoryRouter = express.Router();
 
-ViewMemoryRouter.get('/api/v1/memories/:id', ViewMemoryController.fetchViewMemory);
+ViewMemoryRouter.get('/api/v1/memories/:id', Gate.blockInvasion, ViewMemoryController.fetchViewMemory);
 
 export default ViewMemoryRouter;
