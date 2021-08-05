@@ -15,6 +15,10 @@ export default {
         type: Sequelize.STRING,
         allowNull: false
       },
+      mood: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       picture: {
         type: Sequelize.STRING
       },

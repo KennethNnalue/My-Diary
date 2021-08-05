@@ -1,5 +1,3 @@
-
-
 const {
   Model
 } = require('sequelize');
@@ -20,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   Memory.init({
     title: DataTypes.STRING,
     story: DataTypes.STRING,
+    mood: DataTypes.STRING,
     picture: DataTypes.STRING,
     userId: DataTypes.NUMBER
   }, {

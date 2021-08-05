@@ -108,7 +108,7 @@ describe('SIGN ~ UP', () => {
             email: 'augustineezinwa@gmail.com',
           },
         });
-        userWallet.id = user.id;
+        userWallet.userId = user.id;
         expect(user.name).eql('Augustine');
         done();
       });
@@ -134,7 +134,7 @@ describe('SIGN ~ UP', () => {
             email: 'emeka@gmail.com',
           },
         });
-        anotherUserWallet.id = user.id;
+        anotherUserWallet.userId = user.id;
         expect(user.name).eql('emeka');
         done();
       });
@@ -142,7 +142,7 @@ describe('SIGN ~ UP', () => {
 
   it('test token ushered during signup is valid', (done) => {
     const tokenPacket = decodeToken(userWallet.token);
-    userWallet.id.should.eql(tokenPacket.id);
+    userWallet.userId.should.eql(tokenPacket.userId);
     done();
   });
 
@@ -225,7 +225,7 @@ describe('CREATE MEMORY', () => {
         delete response.body.memory.updatedAt;
         response.body.memory.should.eql({
           ...memory,
-          userId: userWallet.id,
+          userId: userWallet.userId,
           id: 1,
         });
 
@@ -233,7 +233,7 @@ describe('CREATE MEMORY', () => {
          * Check if memory is really created in DB by user
          */
         const memoryFound = await Memory.findOne({
-          where: { userId: userWallet.id },
+          where: { userId: userWallet.userId },
         });
         memoryFound.story.should.eql(memory.story);
         done();
@@ -258,7 +258,7 @@ describe('CREATE MEMORY', () => {
         delete response.body.memory.updatedAt;
         response.body.memory.should.eql({
           ...memory,
-          userId: anotherUserWallet.id,
+          userId: anotherUserWallet.userId,
           id: 2,
         });
 
@@ -266,7 +266,7 @@ describe('CREATE MEMORY', () => {
          * Check if memory is really created in DB by user
          */
         const memoryFound = await Memory.findOne({
-          where: { userId: anotherUserWallet.id },
+          where: { userId: anotherUserWallet.userId },
         });
         memoryFound.story.should.eql(memory.story);
         done();
