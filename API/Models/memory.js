@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      const { User } = Model;
+      const { User } = models;
       Memory.belongsTo(User, { foreignKey: 'userId', onDelete: 'CASCADE' });
     }
   }
