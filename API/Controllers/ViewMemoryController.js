@@ -1,20 +1,23 @@
-import { getMemory } from '../Helpers/query';
+import models from '../models';
 
 class ViewMemoryController {
-  static fetchViewMemory(request, response) {
-    const diaryId = request.params.id;
+  static async fetchViewMemory(request, response) {
+    try {
+      const [[result]] = await models.sequelize.query('SELECT * FROM "Memories" WHERE ("userId" = :userId) AND ("id" = :id)', {
+        replacements: {
+          userId: request.userWallet.userId,
+          id: request.params.id
 
-    const memory = getMemory(diaryId);
-
-    if (!memory) {
-      return response.status(404).json(
-        {
-          message: 'Result not found'
         }
-      );
-    }
+      });
+      return response.json(result);
+    } catch (e) {
+      return response.status(500).json({
+        message: 'Internal Sever Error',
+        error: e.toString()
 
-    return response.json(memory);
+      });
+    }
   }
 }
 
