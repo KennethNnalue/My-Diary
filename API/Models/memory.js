@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     story: DataTypes.STRING,
     mood: DataTypes.STRING,
     picture: DataTypes.STRING,
-    userId: DataTypes.NUMBER
+    userId: DataTypes.NUMBER,
   }, {
     sequelize,
     modelName: 'Memory',
