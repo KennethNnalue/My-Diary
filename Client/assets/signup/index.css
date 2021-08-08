@@ -1,0 +1,140 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+.loginForm {
+    /* height: 460px; */
+    width: 465px;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 20px;
+}
+
+
+.emailText, .passwordText, .nameText {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #797979;
+
+}
+
+.pageTitle {
+    color: #D1D1D1;
+    text-align: center;
+    padding-top: 8%;
+}
+
+.nameSection {
+    margin-top: 10%;
+    margin-left: 9%;
+}
+
+.emailSection {
+    margin-top: 10%;
+    margin-left: 9%;
+}
+
+.passwordSection {
+    margin-top: 25px;
+    margin-left: 9%;
+}
+
+.submitButton {
+    margin-left: 9%;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    width: 156px;
+    height: 45px;
+    border: none;
+    background: #FDAF7F;
+    border-radius: 20px;
+}
+
+.submitButtonText {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.nameInput {
+    width: 80%;
+    height: 40px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 1px solid #D1D1D1;
+    outline: none;
+}
+
+.emailInput {
+    width: 80%;
+    height: 40px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 1px solid #D1D1D1;
+    outline: none;
+}
+
+.emailInput::placeholder, .passwordInput::placeholder, .nameInput::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #D1D1D1;
+}
+
+.passwordInput {
+    width: 80%;
+    height: 40px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 1px solid #D1D1D1;
+    outline: none;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 11% 0 0 0;
+}
+
+  /* FOR MOBILE SCREENS */
+
+  @media(max-width: 999px) {
+
+    .container {
+       justify-content: unset;
+       padding: 30% 0 0 0;
+    }
+
+    .loginForm {
+        width: 100%;
+        border: none;
+    }
+
+    .submitButton {
+        margin-top: 25vh;
+        float: right;
+        margin-right: 10%;
+    }
+
+  }
+
+

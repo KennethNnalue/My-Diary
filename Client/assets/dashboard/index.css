@@ -1,0 +1,182 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+}
+
+.memoryDashboard {
+    height: 35vh;
+    margin-top: 15vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 5%;
+}
+
+.dashboardLeftSection {
+    height: 35vh;
+    object-fit:contain;
+    background-image: url(/svgs/sunset.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.dashboardRightSection {
+
+}
+
+.welcomeText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+}
+
+
+.editButton {
+    background: #FFFFFF;
+    border: 1px solid #FDAF7F;
+    padding: 3% 8%;
+    border-radius: 20px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 40px;
+}
+
+.pencil {
+    width: 40px;
+    height: 40px;
+}
+
+.editButtonText {
+    padding-left: 20px;
+    padding-top: 5px;
+    float: right;
+}
+
+.memoryHeader {
+    margin-top: 2%;
+    padding: 5%;
+    padding-bottom: 0;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FDAF7F;
+}
+
+.memoryList {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    padding: 2%;
+    padding-left: 5%;
+}
+
+.memory {
+    width: 100%;
+    height: 32vh;
+    padding: 2%;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 20px;
+}
+
+.memoryTitle {
+    text-align:center;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 5%;
+}
+
+.memoryImage {
+    object-fit:contain;
+    background-image: url(/svgs/sunset.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    height: 18vh;
+    width: 100%;
+}
+
+.buttonSection {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+/* identical to box height */
+    color: #FDAF7F;
+    text-align: right;
+    margin-top: 3%;
+}
+
+.readButton {
+    background: #FFFFFF;
+    border: 1px solid #FDAF7F;
+    border-radius: 20px;
+    margin-right: 6%;
+    padding: 4% 6%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+/* identical to box height */
+
+
+    color: #FDAF7F;
+    margin-bottom: 3%;
+}
+
+
+  /* FOR MOBILE SCREENS */
+
+  @media(max-width: 999px) {
+    .memoryDashboard {
+        display: block;
+    }
+
+    .memoryList {
+        display: block;
+        padding: 5%;
+    }
+
+    .memory {
+        margin-top: 15px;
+    }
+
+    .memoryDashboard {
+        height:fit-content;
+    }
+
+  }
