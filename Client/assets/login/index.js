@@ -1,4 +1,6 @@
-/**
+//  Remove innitial token before signIn
+window.localStorage.removeItem('token');/**
+
  * get email from email field
  */
 const getEmail = () => document.getElementById('email').value;
@@ -43,7 +45,7 @@ const loginUser = async (event) => {
 
   const result = await response.json();
 
-  console.table(result, '>>>>>this is my result from API');
+//   console.table(result, '>>>>>this is my result from API');
 
   if (response.status === 422) {
     /**

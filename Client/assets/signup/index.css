@@ -14,7 +14,7 @@ html {
 }
 
 
-.loginForm {
+.signupForm {
     /* height: 460px; */
     width: 465px;
     background: #FFFFFF;
@@ -124,7 +124,7 @@ html {
        padding: 30% 0 0 0;
     }
 
-    .loginForm {
+    .signupForm {
         width: 100%;
         border: none;
     }
