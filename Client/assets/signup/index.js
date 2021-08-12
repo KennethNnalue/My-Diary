@@ -68,6 +68,8 @@ const signupUser = async (event) => {
     // Store the token in the local browser
     window.localStorage.setItem('token', result.token);
 
+    window.location.href = `/dashboard?token=${result.token}`;
+
     // redirect user to dashboard
     window.location.href = '/dashboard';
   }

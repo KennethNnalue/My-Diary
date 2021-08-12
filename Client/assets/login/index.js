@@ -17,6 +17,7 @@ const loginButton = document.getElementById('loginButton');
 
 const loginUser = async (event) => {
   event.preventDefault();
+  console.log(event);
   /**
    *
    * get email
@@ -45,7 +46,7 @@ const loginUser = async (event) => {
 
   const result = await response.json();
 
-//   console.table(result, '>>>>>this is my result from API');
+  //   console.table(result, '>>>>>this is my result from API');
 
   if (response.status === 422) {
     /**
@@ -75,6 +76,9 @@ const loginUser = async (event) => {
     });
 
     window.localStorage.setItem('token', result.token);
+
+    //  redirects us to user's dashboard
+    window.location.href = `/dashboard?token=${result.token}`;
 
     // redirect user to dashboard
     window.location.href = '/dashboard';

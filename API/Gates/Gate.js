@@ -15,22 +15,28 @@ class Gate {
     return next();
   }
 
+  static getResponse(isApi, response) {
+    if (isApi) {
+      return response.status(401).json({
+        message: 'Not authorized!, Invalid credentials',
+      });
+    }
+    return response.redirect('/login');
+  }
+
   static blockInvasion(request, response, next) {
-    const tokenInBrowser = request.headers.authorization;
+    const tokenInBrowser = request.cookies.token;
+    const isApi = request.path.includes('api');
 
     if (!tokenInBrowser) {
-      return response.status(401).json({
-        message: 'Not authorized!, No credentials',
-      });
+      return Gate.getResponse(isApi, response);
     }
 
     try {
       request.userWallet = decodeToken(tokenInBrowser);
       return next();
     } catch (e) {
-      return response.status(401).json({
-        message: 'Not authorized!, Invalid credentials',
-      });
+      return Gate.getResponse(isApi, response);
     }
   }
 

@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <title>My Diary</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/memorycreate/index.css">
+    <link rel="stylesheet" type="text/css" href="/nav/nav.css">
+    <link rel="stylesheet" href="/alerts/css/style.css" />
+
+</head>
+
+<body>
+    <!-- Nav bar starts here -->
+    <div class="nav">
+        <div class="nav-header">
+            <div class="nav-title">
+                <a href="/dashboard"><img src="/svgs/diary.svg" class="logo" /></a>
+            </div>
+        </div>
+
+
+        <div class="nav-btn">
+            <input type="checkbox" id="nav-check">
+
+            <label for="nav-check">
+                <span class="dashOne"></span>
+                <span class="dashTwo"></span>
+                <span class="dashThree"></span>
+            </label>
+
+            <ul class="nav-links">
+                <a href="/signout">Signout</a>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Nav bar ends here -->
+
+
+
+    <div class="container">
+
+        <div class="storyForm">
+
+            <form>
+                <div class="diaryTitleSection">
+
+                    <label for="title" class="titleText">Title</label> <br>
+                    <input type="text" id="title" name="email" class="titleInput" placeholder="What's the title ?">
+                    <br>
+                </div>
+
+
+                <div class="moodSection">
+
+                    <label for="mood" class="titleText">What's your mood</label> <br>
+                    <select id="mood" class="titleInput">
+
+                        <option value="">--Select--</option>
+                        <option value="excited">&#128518;</p> Excited</option>
+                        <option value="happy"><p class="emojiText">&#128522;</p> Happy</option>
+                        <option value="sad"><p class="emojiText">&#128532;</p> Sad</option>
+
+                    </select>
+
+                    <br>
+                </div>
+
+
+
+
+                <div class="storySection">
+                    <label for="story" class="storyText">Story</label> <br>
+                    <textarea id="story" name="story" class="storyInput"
+                        placeholder="Please tell your story ..."></textarea>
+                </div>
+
+
+
+                <button type="submit" class="submitButton" id="submitButton"><span class="submitButtonText">Add your
+                        thoughts</span></button>
+                <button class="uploadButton" aria-label="upload image for your memory">
+
+                    <img src="/svgs/camera.svg" class="camera"><input type="file" id="myfile" accept="image/*" class="myfile"></img>
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="/alerts/js/cute-alert.js"></script>
+    <script src="/memorycreate/index.js"></script>
+</body>
+
+
+
+</html>

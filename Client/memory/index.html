@@ -12,7 +12,7 @@
     <div class="nav">
         <div class="nav-header">
             <div class="nav-title">
-                <object data="/svgs/diary1.svg" class="logo"></object>
+                <a href="/dashboard"><img src="/svgs/diary1.svg" class="logo" /></a>
             </div>
         </div>
 
@@ -27,7 +27,7 @@
             </label>
 
             <ul class="nav-links">
-                <a href="/signup">Sign Up</a>
+                <a href="/signout">Sign out</a>
             </ul>
 
         </div>
@@ -39,44 +39,37 @@
 
     <div class="container">
 
-        <div class="memoryDashboard">
+        <div class="memoryDashboard" id="memoryDashboard">
 
 
 
         </div>
 
         <div class="memoryTitle">
-            <p class="memoryCreatedDate"> Fri 20 June 2020</p>
-            <p class="title"> Had Fun At The Pool</p>
+            <p class="memoryCreatedDate" id="date"></p>
+            <p class="title" id="title"> </p>
         </div>
 
         <div class="story">
-          <p class="storyText">
-            It was an exciting day at the pool today, people were everywheere, 
-            I dont even know what to do, do you have an idea of this this could mean, 
-            Please it was such a lovely day today, can you come around and help, 
-            It was an exciting day at the pool today, people were everywheere, 
-            I dont even know what to do, do you have an idea of this this could mean, 
-            Please it was such a lovely day today, can you come around and help,
-             It was an exciting day at the pool today, people were everywheere, 
-             I dont even know what to do, do you have an idea of this this could mean, 
-             Please it was such a lovely day today, can you come around and help
+          <p class="storyText" id="storyText">
+
           </p>
         </div>
 
 
         <div class="buttonSection"> 
 
-            <button class="editButton"><span><img  class="pencil" src="/svgs/edit.svg" alt="edit"></span><span class="editButtonText">Edit</span></button>
+            <a href="" id="memoryEditLink"><button class="editButton"><span><img  class="pencil" src="/svgs/edit.svg" alt="edit"></span><span class="editButtonText">Edit</span></button></a>
 
         </div>
-     
+
 
 
 
     </div>
 
-
+    <script src="/alerts/js/cute-alert.js"></script>
+    <script src="/memory/index.js"></script>
 </body>
 
 

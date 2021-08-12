@@ -1,36 +1,33 @@
 import bcrypt from 'bcrypt-nodejs';
-import models from '../models/index';
+import models from '../models';
 import createToken from '../security/createToken';
 
 const { User } = models;
 
 class SignInController {
   static async signIn(request, response) {
-    const { email, password } = request.body;
+    try {
+      const { email, password } = request.body;
 
-    const userFound = await User.findOne({
-      where: {
-        email
+      const userFound = await User.findOne({ where: { email } });
+
+      const isUserFound = userFound && bcrypt.compareSync(password, userFound.password);
+
+      if (isUserFound) {
+        const token = createToken(userFound.id);
+        response.cookie('token', token, { httpOnly: true });
+        return response.json({
+          message: 'you are signed in!',
+        });
       }
-    }).catch((error) => response.status(500).json({
-      message: 'Internal Sever Error',
-      errorMessage: error.toString()
-    }));
 
-    const isUserFound = userFound && bcrypt.compareSync(password, userFound.password);
-    if (!isUserFound) {
       return response.status(401).json({
-        message: 'Invalid Email or Password'
+        message: 'Invalid email or password',
       });
+    } catch (e) {
+      return response.status(500).json({ error: e.toString() });
     }
-
-    return response.status(200).json(
-      {
-        message: 'Your Signed In',
-        token: createToken(userFound.id, 60 * 60 * 24)
-
-      }
-    );
   }
 }
+
 export default SignInController;

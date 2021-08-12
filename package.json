@@ -27,6 +27,8 @@
   "homepage": "https://github.com/KennethNnalue/My-Diary#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
+    "cloudinary": "^1.26.3",
+    "cookie-parser": "^1.4.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-validator": "^6.12.1",
