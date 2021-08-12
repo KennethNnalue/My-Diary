@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/KennethNnalue/My-Diary#readme",
   "dependencies": {
+    "@babel/runtime": "^7.15.3",
     "babel-plugin-inline-json-import": "^0.3.2",
     "bcrypt-nodejs": "0.0.3",
     "cloudinary": "^1.26.3",
