@@ -24,7 +24,7 @@ const index = express.Router();
 
 index.use(express.static(path.join(__dirname, '../../Client/assets')));
 
-index.use(express.json());
+index.use(express.json({ limit: '50mb' }));
 index.use(cookieParser());
 // merge IndexRouter into index
 index.use(
