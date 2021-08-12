@@ -10,7 +10,7 @@
   "scripts": {
     "start:dev": "nodemon --exec babel-node API/server.js",
     "start": "node build/server.js",
-    "build": "npm run clean  && babel API --out-dir build",
+    "build": "npm run clean  && babel API --out-dir build && npx sequelize-cli db:migrate",
     "clean": "rm -rf build",
     "db-test-init": "npx sequelize-cli db:migrate:undo:all --env test --debug && npx sequelize-cli db:migrate --env test --debug",
     "test": "npm run db-test-init && npx cross-env NODE_ENV=test mocha --require @babel/register tests/**.test.js --timeout 20000 --exit"
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/KennethNnalue/My-Diary#readme",
   "dependencies": {
+    "babel-plugin-inline-json-import": "^0.3.2",
     "bcrypt-nodejs": "0.0.3",
     "cloudinary": "^1.26.3",
     "cookie-parser": "^1.4.5",
