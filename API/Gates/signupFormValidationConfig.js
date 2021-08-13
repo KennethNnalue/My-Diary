@@ -45,7 +45,7 @@ const signupFormValidationConfig = {
     },
     custom: {
       options: (value) => {
-        if (value && value.length < 5) return Promise.reject(new Error('name is too short'));
+        if (value && value.length < 3) return Promise.reject(new Error('name is too short'));
         if (value && value.length > 20) return Promise.reject(new Error('name is too long'));
         return Promise.resolve();
       }
