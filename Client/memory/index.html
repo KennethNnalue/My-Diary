@@ -3,8 +3,12 @@
 <head>
     <title>My Diary</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" type="image/jpg" href="/svgs/diary2.svg"/>
+
     <link rel="stylesheet" type="text/css" href="/memory/index.css">
     <link rel ="stylesheet" type = "text/css" href = "/nav/nav.css">
+    <link rel="stylesheet" href="/alerts/css/style.css" />
+
 
 </head>
 
@@ -12,7 +16,7 @@
     <div class="nav">
         <div class="nav-header">
             <div class="nav-title">
-                <a href="/dashboard"><img src="/svgs/diary1.svg" class="logo" /></a>
+                <a href="/dashboard"><img src="/svgs/diary2.svg" class="logo" /></a>
             </div>
         </div>
 
@@ -56,8 +60,12 @@
           </p>
         </div>
 
+        
 
         <div class="buttonSection"> 
+
+            <a href="" id="memoryDeleteLink"><button class="deleteButton"><span><img  class="bin" src="/svgs/bin.svg" alt="edit"></span><span class="deleteButtonText">Delete</span></button></a>
+
 
             <a href="" id="memoryEditLink"><button class="editButton"><span><img  class="pencil" src="/svgs/edit.svg" alt="edit"></span><span class="editButtonText">Edit</span></button></a>
 
@@ -70,6 +78,8 @@
 
     <script src="/alerts/js/cute-alert.js"></script>
     <script src="/memory/index.js"></script>
+    <script src="/memory/delete.js"></script>
+
 </body>
 
 
